@@ -1,0 +1,29 @@
+<div class="text-center mt-5">
+  <app-not-found [visible]="!phone" notFoundMessage="Product not Found!" resetLinkText="Back to Shop"></app-not-found>
+
+</div>
+
+<div *ngIf="phone" class="container">
+  <div class="card shadow-lg">
+      <div class="card-body">
+          <h3 class="card-title text-center" style="border-bottom: 1px solid black;">Phone Details</h3>
+          <div class="row">
+              <div class="col-lg-5 col-md-5 col-sm-6">
+                  <div class="white-box text-center"><img [src]="phone.imageUrl" style="width: 350px; height: 350px;"></div>
+              </div>
+              <div class="col-lg-7 col-md-7 col-sm-6">
+                  <h4 class="box-title mt-5">{{phone.name}}</h4>
+                  <h3 class="text-success">{{phone.category}}</h3>
+                  <h2 class="mt-5">
+                     {{phone.price | currency}}
+                  </h2>
+                  <button (click)="addToCart()" class="btn btn-success btn-rounded mt-2">Buy Now</button>
+                  <h3 class="box-title mt-5">About the phone:</h3>
+                  <ul class="list-unstyled">
+                      <li>{{phone.description}}</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<nav
+  class="container navbar navbar-expand-lg navbar-light bg-light"
+  style="border-bottom: 1px solid black"
+>
+  <a class="navbar-brand" href="#">PhoneStore</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse"
+    style="display: flex; justify-content: space-between"
+  >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/cart-page" routerLinkActive="active"
+          >Cart</a
+        >
+      </li>
+    </ul>
+    <div>
+      <button routerLink="/login" class="btn btn-secondary">Login</button>
+    </div>
+  </div>
+</nav>

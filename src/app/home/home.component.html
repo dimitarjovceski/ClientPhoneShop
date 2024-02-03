@@ -1,0 +1,29 @@
+<div class="container text-center mb-3 d-flex">
+  <div class="container">
+    <app-category></app-category>
+  </div>
+  <div class="container">
+    <app-search></app-search>
+  </div>
+</div>
+<div class="text-center mt-5">
+  <app-not-found [visible]="!phones || phones.length <= 0" resetLinkText="Go to Shop" notFoundMessage="Product not found!"></app-not-found>
+</div>
+<div class="row">
+  <div
+    routerLink="/phone-detail/{{ item.id }}"
+    *ngFor="let item of phones"
+    class="card shadow-lg"
+    style="width: 18rem; margin: 10px; cursor: pointer"
+  >
+    <img src="{{ item.imageUrl }}" class="card-img-top" alt="..." />
+    <div class="card-body text-center">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text">{{ item.price | currency }}</p>
+    </div>
+    <div class="text-center mt-4">
+      <h1 class="text-danger">No items in your cart!</h1>
+      <a routerLink="/" class="btn btn-secondary mt-4">Back to Shop list</a>
+    </div>
+  </div>
+</div>
